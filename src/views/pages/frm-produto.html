@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Sistema de pedidos</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale= 1">
+		<link rel="stylesheet" href="js/datatables/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="js/datatables/css/responsive.dataTables.min.css">
+		<link rel="stylesheet" type="text/css" href="js/datatables/css/DataTables_boot.css">
+		<link rel="stylesheet" href="css/grade.css">
+		<link rel="stylesheet" href="css/auxiliar.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+	<!--cabeçalho aqui-->
+		<div class="topo">
+			<a href="" class="mobmenu"><i class="fas fa-bars"></i></a>
+			<a href="index.html" class="logo"><img src="img/logo.png" class="float-left mr-2"><p class="d-inline-block">Sistema de pedidos</p></a>
+			
+		</div>
+		<div class="conteudo">
+			<div class="rows">
+				<div class="col-3 menu-lateral">
+					<div class="cx text-center text-uppercase mb-5">
+						<h1 class="h5 mb-0">Área administrativa</h1>
+					</div>
+					<div class="itens-menu">
+						<ul>
+							<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+						</ul>
+						<div id="accordion">
+							<span><a href=""><i class="fas fa-user"></i> Cliente</a></span>
+							<ul>	
+								<li><a href="lst-cliente.html"><i class="far fa-list-alt"></i> Lista de cliente</a></li>	
+								<li><a href="frm-cliente.html"><i class="far fa-list-alt"></i> Cadastro de cliente</a></li>	
+							</ul>
+							
+							<span><a href=""><i class="fas fa-boxes"></i> Produto</a></span>
+							<ul>									
+								<li><a href="lst-produto.html"><i class="far fa-list-alt"></i> Lista de produto</a></li>
+								<li><a href="frm-produto.html"><i class="far fa-list-alt"></i> Cadastro de produto</a></li>
+							</ul>
+							<span><a href=""><i class="fas fa-search"></i> Consulta</a></span>
+							<ul>
+								<li><a href="pedidos-pendentes.html"><i class="far fa-list-alt"></i> Pedidos pendentes</a></li>
+								<li><a href="todos-pedidos.html"><i class="far fa-list-alt"></i> Todos os pendentes</a></li>
+							</ul>
+							<span><a href=""><i class="far fa-file-alt"></i> Relátorios</a></span>	
+							<ul>					 
+								<li><a href="relatorio-pedido.html"><i class="far fa-list-alt"></i> Relatórios de pedidos</a></li>
+							</ul>
+							<span><a href=""><i class="fas fa-chart-line"></i> Gráfico</a></span>	
+							<ul>		
+								<li><a href="grafico-diario.html"><i class="far fa-list-alt"></i> Gráfico diário</a></li>
+							</ul>
+						</div>
+						<ul>
+							<li><a href=""> <i class="fas fa fa-sign-out-alt" aria-hidden="true"></i> Sair</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-9 home">
+				<div class="caixa">					
+					<div class="conteudo pt-3">
+						<div class="titulo mb-2"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastro de produto</span></div>
+						<div class="base-caixa formulario">							
+							<form action="" method="">
+							<span class="msg sucesso"><i class="fas fa-check"></i> Mensagem de sucesso <a href="" class="fas fa-times float-right"></a></span>
+
+							<span class="msg erro"><i class="fas fa-exclamation-triangle"></i> Mensagem de erro <a href="" class="fas fa-times float-right"></a></span>
+	
+								<div class="rows">
+									<div class="col-4 img-up">
+										<div class="campo-upload">
+											<label for="arquivo">
+												<img src="img/img-semproduto.png" id="imgUp" class="img-fluido">
+												<span>Inserir produto</span>
+											</label>
+											<input type="file" name="arquivo" id="arquivo" onchange="pegaArquivo(this.files)"> 
+										</div>
+										<div id="uploadStatus"></div>
+									</div>
+									<div class="col-8"> 
+										<div class="rows">
+											<div class="col-12">
+												<span class="text-label">Nome do produto</span>
+												<input type="text" placeholder="Digite seu nome" class="form-campo">
+											</div>										
+											<div class="col-4">
+												<span class="text-label">Tipo de produto</span>
+												<input type="text" placeholder="Digite seu endereço" class="form-campo">
+											</div>											
+											<div class="col-4">
+												<span class="text-label">Categoria</span>
+												<select class="form-campo">
+													<option>Categoria</option>
+													<option>Categoria</option>
+													<option>Categoria</option>
+												</select>
+											</div>												
+											<div class="col-4">
+												<span class="text-label">Data</span>
+												<input type="date" placeholder="Digite seu endereço" class="form-campo">
+											</div>									
+											<div class="col-4">
+												<span class="text-label">Preço</span>
+												<input type="text" placeholder="Digite seu endereço" class="form-campo">
+											</div>
+											<div class="col-4">
+												<span class="text-label">Preço atual</span>
+												<input type="text" placeholder="Digite seu endereço" class="form-campo">
+											</div>
+											<div class="col-4">
+												<span class="text-label">Ativo</span>
+												<input type="text" placeholder="Digite seu endereço" class="form-campo">
+											</div>											
+											<div class="col-12 mt-4 pb-4">
+												<input type="submit" value="Cadastrar" class="btn d-table m-auto">
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</form>
+						</div>
+					
+					</div>
+				</div>
+			</div>		
+		</div>	
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="js/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="js/js.js"></script>
+		<script src="js/componentes/js_grafico.js"></script>
+		<script src="js/componentes/js_data_table.js"></script>
+		<script src="https://kit.fontawesome.com/9480317a2f.js"></script>	
+		
+		<!-- Acordeon-->		
+		<script src="js/jquery-ui.js"></script>
+		<!-- Graficos -->
+		<script src="js/chart.js/Chart.min.js"></script>		
+	</body>
+</html>
