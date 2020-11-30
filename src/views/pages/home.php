@@ -1,125 +1,130 @@
 <?php $render('header');?>
 
-<div class="col-9 home">
-    <div class="caixa">
-
-        <div class="conteudo pt-3">
-            <div class="titulo">
-                <h1 class="h4 mb-0"><i class="fas fa-home"></i> Seja bem vindo</h1>
+<div class="container py-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-dark">
+            <li class="breadcrumb-item "><a href="inde">Home</a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Cronograma</li>
+        </ol>
+    </nav>
+    <div class="container-cronograma">
+        <div class="row">
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Dominando o MVC</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="<?=$base;?>atividade/modulo_1" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
             </div>
-            <div class="rows mt-3">
-                <div class="col-12 mb-3">
-                    <div class="caixa-home">
-                        <span class="d-block text-uppercase mb-3 h5">Pedidos pendêntes</span>
-                        <div class="tabela-responsiva">
-                            <table width="100%" cellpadding="0" cellspacing="0" class="tabela">
-
-                                <thead>
-                                    <tr>
-                                        <th align="left" width="320">Cliente:</th>
-                                        <th align="center" width="50">Data:</th>
-                                        <th align="center" width="50">Total:</th>
-                                        <th align="center" width="30">Açao</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Nome do cliente</td>
-                                        <td align="center">30/11/2019</td>
-                                        <td align="center">R$100,00</td>
-                                        <td align="center"><a href="itens-pedido.html" class="btn btn-outline-roxo">Ver
-                                                mais</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nome do cliente</td>
-                                        <td align="center">30/11/2019</td>
-                                        <td align="center">R$100,00</td>
-                                        <td align="center"><a href="itens-pedido.html" class="btn btn-outline-roxo">Ver
-                                                mais</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nome do cliente</td>
-                                        <td align="center">30/11/2019</td>
-                                        <td align="center">R$100,00</td>
-                                        <td align="center"><a href="itens-pedido.html" class="btn btn-outline-roxo">Ver
-                                                mais</a></td>
-                                    </tr>
-                                </tbody>
-
-                            </table>
-
-                        </div>
-                    </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Logica de programação</h5>
+                    <p class="card-text text-white">27/11/2020 - 06/12/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
                 </div>
-
-                <div class="col-6 mb-3 d-flex">
-                    <div class="caixa-home">
-                        <span class="d-block text-uppercase mb-3 h5">Gráfico do dia</span>
-                        <div class="rows">
-                            <div class="col-12">
-                                <canvas id="myChart" width="300" height="220" class="img-fluido"></canvas>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Integração com Banco de Dados</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
                 </div>
-
-
-                <div class="col-6 mb-3 d-flex">
-                    <div class="caixa-home">
-                        <span class="d-block text-uppercase mb-3 h5">Todos os Pedidos</span>
-                        <div class="rolagem-tabela">
-                            <div class="tabela-responsiva">
-                                <table width="100%" cellpadding="0" cellspacing="0" class="tabela">
-
-                                    <thead>
-                                        <tr>
-                                            <th align="left">Cliente:</th>
-                                            <th align="center">Data:</th>
-                                            <th align="center">Total:</th>
-                                            <th align="center">Açao</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Nome do cliente</td>
-                                            <td align="center">30/11/2019</td>
-                                            <td align="center">R$100,00</td>
-                                            <td align="center"><a href="todos-pedidos.html"
-                                                    class="btn btn-outline-roxo">Ver mais</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nome do cliente</td>
-                                            <td align="center">30/11/2019</td>
-                                            <td align="center">R$100,00</td>
-                                            <td align="center"><a href="todos-pedidos.html"
-                                                    class="btn btn-outline-roxo">Ver mais</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nome do cliente</td>
-                                            <td align="center">30/11/2019</td>
-                                            <td align="center">R$100,00</td>
-                                            <td align="center"><a href="todos-pedidos.html"
-                                                    class="btn btn-outline-roxo">Ver mais</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nome do cliente</td>
-                                            <td align="center">30/11/2019</td>
-                                            <td align="center">R$100,00</td>
-                                            <td align="center"><a href="todos-pedidos.html"
-                                                    class="btn btn-outline-roxo">Ver mais</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nome do cliente</td>
-                                            <td align="center">30/11/2019</td>
-                                            <td align="center">R$100,00</td>
-                                            <td align="center"><a href="todos-pedidos.html"
-                                                    class="btn btn-outline-roxo">Ver mais</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">SQL Avançado</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">PHP e JQuery</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Praticando Programação</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Pedido Cliente</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma  bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Pedido Admin</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Ead Admin</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Ead Campus</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Agendamento Admin</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema: Agendamento Médico</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Agendamento Paciente</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema Escolar: Diretoria</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema Escolar Professor</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                </div>
+            </div>
+            <div class="card card-cronograma bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Sistema Escolar Aluno</h5>
+                    <p class="card-text text-white">17/11/2020 - 26/11/2020</p>
+                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
                 </div>
             </div>
         </div>

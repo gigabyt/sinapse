@@ -4,8 +4,10 @@ use core\Router;
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
-$router->get('/dashboard/servidor', 'ServidorController@index');
-$router->get('/cadastro', 'ContatoController@index');
+$router->get('/atividades', 'HomeController@atividades');
+$router->get('/atividade/modulo_1', 'Modulo1Controller@index');
+
+
 //Rotas para calcular a equação do 2º grau
 $router->get('/exercicio/equacao', 'ExerciciosController@equacao');
 $router->post('/exercicio/equacao', 'ExerciciosController@actionEquacao');
