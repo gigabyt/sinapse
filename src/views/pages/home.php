@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title text-white">Logica de programação</h5>
                     <p class="card-text text-white">27/11/2020 - 06/12/2020</p>
-                    <a href="#" class="btn btn-outline-warning">Ir para atividades</a>
+                    <a href="atividade/modulo_2" class="btn btn-outline-warning">Ir para atividades</a>
                 </div>
             </div>
             <div class="card card-cronograma bg-dark">

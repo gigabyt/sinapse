@@ -5,17 +5,18 @@ use \core\Model;
 class Exercicios extends Model {    
     
     public function calcularEquacao($a, $b,$c){
+       
         $delta = ($b * $b) - 4 * $a* $c;
         $x1 = (-$b+ sqrt($delta))/(2 * $a);
         $x2 = (-$b- sqrt($delta))/(2 * $a);
-
+        
         if($b>0){
             $b = "+".$b;
-        }elseif($c>0){
-        $c = "+".$c;
-        }elseif($a=1){
-        $a = "";
         }
+        if($c>0){
+        $c = "+".$c;
+        }
+       
 
         if($delta < 0){
             $result = "A equação não tem raizes reais pois delta < 0";

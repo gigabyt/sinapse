@@ -3,7 +3,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-dark">
                 <li class="breadcrumb-item "><a href="#">Home</a></li>
-                <li class="breadcrumb-item active text-white" aria-current="page">Modulo 1</li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Modulo 2</li>
                 <li class="breadcrumb-item active text-white" aria-current="page">Atividades</li>
             </ol>
         </nav>
@@ -21,10 +21,10 @@
             <tbody>              
               <tr>
                 <th scope="row">2</th>
-                <td>Agenda de Contato</td>
+                <td>Equação do 2º grau Completa</td>
                 <td>Sim</td>
                 <td>Sim</td>
-                <td><a class="btn btn-sm btn-outline-success" href="http://agenda.mbtec.ml/" target="blanck">Ver</a></td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/equacao">Ver</a></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
