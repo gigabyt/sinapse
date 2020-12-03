@@ -18,10 +18,8 @@ $router->post('/atividade/modulo_2/equacao', 'Modulo2Controller@actionEquacao');
 $router->get('/atividade/modulo_2/salario', 'Modulo2Controller@salario');
 $router->post('/atividade/modulo_2/salario', 'Modulo2Controller@actionSalario');
 
-
-
 // Rotas para calcular o saldo
-$router->get('/exercicio/saldo', 'ExerciciosController@saldo');
-$router->post('/exercicio/saldo', 'ExerciciosController@calcularSaldo');
+$router->get('/atividade/modulo_2/saldo', 'Modulo2Controller@saldo');
+$router->post('/atividade/modulo_2/saldo', 'Modulo2Controller@calcularSaldo');
 
 

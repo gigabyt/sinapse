@@ -46,15 +46,42 @@ class Modulo2Controller extends Controller {
 
         $salario = filter_input(INPUT_POST, 'salario');
        
-        if($salario){
+        if($salario !=''){
         $dados = $eq->calcularSalario($salario);
 
         $this->render('execicio_reajuste', [
             'dados' => $dados,            
 
         ]);
+        }else{
+            $this->render('execicio_reajuste');
         }
        
+    }
+    public function saldo(){
+        
+
+        $this->render('');
+       
+
+    }
+    public function calcularSaldo(){
+        $saldo = new Exercicios();
+
+        $salario = filter_input(INPUT_POST, 'salario');
+        $x = filter_input(INPUT_POST, 'x');
+        $y = filter_input(INPUT_POST, 'y');
+       
+        if($saldo){
+        $dados = $saldo->calcularSaldo($salario, $x, $y);
+
+        $this->render('exercicio_saldo1', [
+            'dados' => $dados,            
+
+        ]);
+        }
+        $this->redirect('exercicio/saldo1');
+
     }
     
    

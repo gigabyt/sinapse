@@ -20,18 +20,25 @@
             </thead>
             <tbody>              
               <tr>
-                <th scope="row">2</th>
+                <th scope="row">1</th>
                 <td>Equação do 2º grau Completa</td>
                 <td>Sim</td>
                 <td>Sim</td>
                 <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/equacao">Ver</a></td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Controle de Estoque</td>
+                <th scope="row">2</th>
+                <td>Reajuste Salarial</td>
                 <td>Sim</td>
                 <td>Sim</td>
                 <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/salario">Ver</a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Saldo de salário</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/saldo">Ver</a></td>
               </tr>
             </tbody>
           </table>

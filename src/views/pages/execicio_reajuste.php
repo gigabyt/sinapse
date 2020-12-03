@@ -5,7 +5,7 @@
             <li class="breadcrumb-item "><a href="#">Home</a></li>
             <li class="breadcrumb-item active text-white" aria-current="page">Atividades</li>
             <li class="breadcrumb-item active text-white" aria-current="page">Modulo 2</li>
-            <li class="breadcrumb-item active text-white" aria-current="page">Equação do 2º Grau</li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Reajuste de Salário</li>
         </ol>
     </nav>
     <div class="container-table">
@@ -58,7 +58,7 @@
 
                     <?php }else{?>
                         <div class="alert alert-danger" role="alert">
-                        Todos os campos devem ser preenchidos
+                        Preencha o campo com seu salário para calcular o reajuste!
                     </div>
                     <?php }
                     ?>
