@@ -31,7 +31,7 @@
                 <td>Controle de Estoque</td>
                 <td>Sim</td>
                 <td>Sim</td>
-                <td><a class="btn btn-sm btn-outline-success" href="http://estoque.mbtec.ml/" target="blanck">Ver</a></td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/salario">Ver</a></td>
               </tr>
             </tbody>
           </table>

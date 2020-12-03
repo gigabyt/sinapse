@@ -8,26 +8,6 @@ class ExerciciosController extends Controller{
     
   
 
-    public function salario(){ 
-        
-        $this->render('exercicio_reajuste_salario');
-    }
-    public function actionSalario(){
-        $eq = new Exercicios();
-
-        $salario = filter_input(INPUT_POST, 'salario');
-       
-        if($salario){
-        $dados = $eq->calcularSalario($salario);
-
-        $this->render('exercicio_reajuste_salario', [
-            'dados' => $dados,            
-
-        ]);
-        }
-        $this->redirect('exercicio/salario');
-    }
-
     public function saldo(){
         
 

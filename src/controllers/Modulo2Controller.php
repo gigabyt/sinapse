@@ -35,5 +35,27 @@ class Modulo2Controller extends Controller {
         }
       
     }
+    
+
+    public function salario(){ 
+        
+        $this->render('execicio_reajuste');
+    }
+    public function actionSalario(){
+        $eq = new Exercicios();
+
+        $salario = filter_input(INPUT_POST, 'salario');
+       
+        if($salario){
+        $dados = $eq->calcularSalario($salario);
+
+        $this->render('execicio_reajuste', [
+            'dados' => $dados,            
+
+        ]);
+        }
+       
+    }
+    
    
 }
