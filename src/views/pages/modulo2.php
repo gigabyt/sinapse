@@ -40,6 +40,20 @@
                 <td>Sim</td>
                 <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/saldo">Ver</a></td>
               </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Saldo de Médio</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/saldo_medio">Ver</a></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Ordem crescente</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/ordenar">Ver</a></td>
+              </tr>
             </tbody>
           </table>
         </div>

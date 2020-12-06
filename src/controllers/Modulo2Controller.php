@@ -14,7 +14,7 @@ class Modulo2Controller extends Controller {
     }
     public function equacao(){
         
-        $this->render('execicio_equacao');
+        $this->render('exercicio_equacao');
     }
     public function actionEquacao(){
         $eq = new Exercicios();
@@ -26,12 +26,12 @@ class Modulo2Controller extends Controller {
         if($a !='' && $b && $c){
         $dados = $eq->calcularEquacao($a, $b, $c);
 
-        $this->render('execicio_equacao', [
+        $this->render('exercicio_equacao', [
             'dados' => $dados,            
 
         ]);
         }else{
-            $this->render('execicio_equacao');
+            $this->render('exrecicio_equacao');
         }
       
     }
@@ -39,7 +39,7 @@ class Modulo2Controller extends Controller {
 
     public function salario(){ 
         
-        $this->render('execicio_reajuste');
+        $this->render('exercicio_reajuste');
     }
     public function actionSalario(){
         $eq = new Exercicios();
@@ -49,19 +49,19 @@ class Modulo2Controller extends Controller {
         if($salario !=''){
         $dados = $eq->calcularSalario($salario);
 
-        $this->render('execicio_reajuste', [
+        $this->render('exercicio_reajuste', [
             'dados' => $dados,            
 
         ]);
         }else{
-            $this->render('execicio_reajuste');
+            $this->render('exercicio_reajuste');
         }
        
     }
     public function saldo(){
         
 
-        $this->render('');
+        $this->render('exercicio_saldo');
        
 
     }
@@ -72,17 +72,74 @@ class Modulo2Controller extends Controller {
         $x = filter_input(INPUT_POST, 'x');
         $y = filter_input(INPUT_POST, 'y');
        
-        if($saldo){
+        if($saldo !=''){
         $dados = $saldo->calcularSaldo($salario, $x, $y);
 
-        $this->render('exercicio_saldo1', [
+        $this->render('exercicio_saldo', [
             'dados' => $dados,            
 
         ]);
+        }else{
+            $this->render('execicio_saldo');
         }
-        $this->redirect('exercicio/saldo1');
+       
 
     }
+    public function saldoMedio(){
+        
+
+        $this->render('exercicio_saldo_medio');
+       
+
+    }
+    public function calcularCredito(){
+        $creditoConcedito = new Exercicios();
+
+        $saldo = filter_input(INPUT_POST, 'saldo');
+        
+       
+        if($saldo !=''){
+        $dados = $creditoConcedito->calcularCredito($saldo);
+
+        $this->render('exercicio_saldo_medio', [
+            'dados' => $dados,            
+
+        ]);
+        }else{
+            $this->render('exercicio_saldo_medio');
+        }
+       
+
+    }
+    public function ordenar(){
+        
+
+        $this->render('exercicio_ordem');
+       
+
+    }
+    public function actionOrdenar(){
+        $ordem = new Exercicios();
+
+        $a = filter_input(INPUT_POST, 'a');
+        $b = filter_input(INPUT_POST, 'b');
+        $c = filter_input(INPUT_POST, 'c');
+        
+       
+        if($a !='' &&  $b !='' && $c !=''){
+        $dados = $ordem->ordenar($a, $b, $c);
+           
+        $this->render('exercicio_ordem', [
+            'dados' => $dados,            
+
+        ]);
+        }else{
+            $this->render('exercicio_ordem');
+        }
+       
+
+    }
+    
     
    
 }

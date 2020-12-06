@@ -22,4 +22,11 @@ $router->post('/atividade/modulo_2/salario', 'Modulo2Controller@actionSalario');
 $router->get('/atividade/modulo_2/saldo', 'Modulo2Controller@saldo');
 $router->post('/atividade/modulo_2/saldo', 'Modulo2Controller@calcularSaldo');
 
+// Rotas para calcular o saldo médio
+$router->get('/atividade/modulo_2/saldo_medio', 'Modulo2Controller@saldoMedio');
+$router->post('/atividade/modulo_2/saldo_medio', 'Modulo2Controller@calcularCredito');
 
+
+// Rotas para cordenar numero maiior
+$router->get('/atividade/modulo_2/ordenar', 'Modulo2Controller@ordenar');
+$router->post('/atividade/modulo_2/ordenar', 'Modulo2Controller@actionOrdenar');

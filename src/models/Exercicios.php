@@ -69,24 +69,74 @@ class Exercicios extends Model {
         $cheque1 = $x + $x * 0.38;
         $cheque2 = $y + $y * 0.38;
         $saldoRestante = $saldo - ($cheque1 + $cheque2);
-        $reposta = number_format($saldoRestante, 2, '.', '');   
+        $resposta = number_format($saldoRestante, 2, '.', '');   
 
         }else{
             $saldo = $salario;
             $cheque1 = 0;
             $cheque2 = 0;
             $saldoRestante = $saldo - ($cheque1 + $cheque2);
-            $reposta = number_format($saldoRestante, 2, '.', '');   
+            $resposta = number_format($saldoRestante, 2, '.', '');   
         }
         
         $res=[
             "salario"=> $saldo,
             "cheque1"=> $cheque1,
             "cheque2"=> $cheque2,
-            "resposta"=>$reposta
+            "resposta"=>$resposta
         ];
         return $res;
     }
     
+    public function calcularCredito($saldo){
+        $saldoMedio = $saldo;
+        $credito = "";
+        if($saldoMedio <=500){
+            $credito=$saldoMedio * 0;
+            $saldoMedio = $saldo;
+            $saldoCredito = $saldoMedio + $credito;            
+            $resposta = "Você Não tem direito a crédtio";
+
+        }elseif($saldoMedio >500 && $saldoMedio <=1000 ){
+            $credito=$saldoMedio * 0.3;
+            $saldoMedio = $saldo;
+            $saldoCredito = $saldoMedio + $credito;            
+            $resposta = "Você tem direito a crédtio de R$ ".number_format($credito, 2, '.','');
+        }elseif($saldoMedio >1000 && $saldoMedio<=3000 ){
+            $credito=$saldoMedio * 0.4;
+            $saldoMedio = $saldo;
+            $saldoCredito = $saldoMedio + $credito;            
+            $resposta = "Você tem direito a crédtio de R$ ".number_format($credito, 2, '.','');
+        }
+        elseif($saldoMedio >3000 ){
+            $credito=$saldoMedio * 0.5;
+            $saldoMedio = $saldo;
+            $saldoCredito = $saldoMedio + $credito;            
+            $resposta = "Você tem direito a crédtio de R$ ".number_format($credito, 2, '.','');
+        }else{
+            $credito=0;
+            $saldoMedio = $saldo;
+            $saldoCredito = $saldoMedio + $credito;            
+            $resposta = "Nenum valor informado";
+        }
+        return $resultado=[
+            'credito'=> $credito,
+            'saldoMedio' => $saldo,
+            'saldoCredito' => $saldoCredito,            
+            'resposta' => $resposta,
+        ];
+
+    }
+    public function ordenar($a, $b, $c){
+    
+        $ordem['a']=$a;
+        $ordem['b']=$b;
+        $ordem['c']=$c;
+
+        asort($ordem);
+
+        return $ordem;
+
+    }
 
 }
