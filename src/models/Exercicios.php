@@ -17,7 +17,6 @@ class Exercicios extends Model {
         $c = "+".$c;
         }
        
-
         if($delta < 0){
             $result = "A equação não tem raizes reais pois delta < 0";
             $x1="Não existe";
@@ -129,14 +128,85 @@ class Exercicios extends Model {
     }
     public function ordenar($a, $b, $c){
     
-        $ordem['a']=$a;
-        $ordem['b']=$b;
-        $ordem['c']=$c;
+        $ordem[]=$a;
+        $ordem[]=$b;
+        $ordem[]=$c;
 
-        asort($ordem);
+        sort($ordem);
 
         return $ordem;
 
     }
+
+    public function maiorNumero($a, $b, $c, $d, $e,$f){
+    
+        $numero[]=$a;
+        $numero[]=$b;
+        $numero[]=$c;
+        $numero[]=$d;
+        $numero[]=$e;
+        $numero[]=$f;
+
+        rsort($numero);
+        
+        return $numero;
+
+    }
+    public function calcularComissao($s, $v){
+        $salario = $s;
+        $vendas = $v;
+        
+        if($vendas <=1000){
+            $comissao = $vendas * 0.03;
+            $salarioComissionado = $salario + $comissao;
+
+        }else{
+            $comissao = $vendas * 0.05;
+            $salarioComissionado = $salario + $comissao;
+        }
+        $c=[
+            'salario'=>$salario,
+            'salarioComissionado'=>$salarioComissionado,
+            'vendas'=> $vendas,
+            'comissao'=>$comissao
+        ];
+        return $c;
+
+    }
+
+    public function calcularTriangulo($a, $b, $c){
+
+        if($a > ($b + $c)){
+            $triangulo = "Não existe";
+
+        }elseif(($a * $a ) == ($b * $b + $c * $c)){
+            $triangulo = "Triângulo Retângulo";
+
+        }elseif(($a * $a) > ($b * $b)+($c * $c)){
+            $triangulo = "Triângulo Obtusângulo";
+
+        }elseif(($a * $a) < ($b * $b)+($c * $c)){
+            $triangulo = "Triângulo Acutângulo";
+
+        }elseif($a = $b & $b = $c){
+            $triangulo = "Triângulo Equilátero";
+
+        }elseif($a = $b &&  $b != $c || $c = $b && $b != $a){
+            $triangulo = "Triângulo Isósceles";
+        }else{
+            $triangulo="";
+        }
+
+        $dados=[
+            'a'=>$a,
+            'b'=>$b,
+            'c'=>$c,
+            'triangulo'=>$triangulo
+        ];
+
+        return $dados;
+
+    }
+
 
 }

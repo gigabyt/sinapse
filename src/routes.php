@@ -27,6 +27,18 @@ $router->get('/atividade/modulo_2/saldo_medio', 'Modulo2Controller@saldoMedio');
 $router->post('/atividade/modulo_2/saldo_medio', 'Modulo2Controller@calcularCredito');
 
 
-// Rotas para cordenar numero maiior
+// Rotas para ordenar numero
 $router->get('/atividade/modulo_2/ordenar', 'Modulo2Controller@ordenar');
 $router->post('/atividade/modulo_2/ordenar', 'Modulo2Controller@actionOrdenar');
+
+// Rotas para achar  numero maior
+$router->get('/atividade/modulo_2/maior_numero', 'Modulo2Controller@maiorNumero');
+$router->post('/atividade/modulo_2/maior_numero', 'Modulo2Controller@actionMaiorNumero');
+
+// Rotas para comissao de um vendedor
+$router->get('/atividade/modulo_2/comissao', 'Modulo2Controller@comissao');
+$router->post('/atividade/modulo_2/comissao', 'Modulo2Controller@actionComissao');
+
+// Rotas para calculo do triângulo
+$router->get('/atividade/modulo_2/triangulo', 'Modulo2Controller@triangulo');
+$router->post('/atividade/modulo_2/triangulo', 'Modulo2Controller@actionTriangulo');

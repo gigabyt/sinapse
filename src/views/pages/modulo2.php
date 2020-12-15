@@ -54,6 +54,20 @@
                 <td>Sim</td>
                 <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/ordenar">Ver</a></td>
               </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Comissao do vendedor</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/comissao">Ver</a></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Cálculo do triângulo</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td><a class="btn btn-sm btn-outline-success" href="<?=$base;?>atividade/modulo_2/triangulo">Ver</a></td>
+              </tr>
             </tbody>
           </table>
         </div>
